@@ -1,0 +1,14 @@
+.container img{
+	width: 250px;
+}
+.container {
+	width: 100%;
+}
+.wrapper {
+	width: 800px;
+	margin:0 auto;
+}
+.container .products {
+	display: grid;
+	grid-template-columns: auto auto;
+}
