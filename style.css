@@ -1,14 +1,31 @@
 .container img{
 	width: 250px;
+	float: left;
+	margin: 20px;
 }
 .container {
 	width: 100%;
 }
 .wrapper {
-	width: 800px;
+	width: 1100px;
 	margin:0 auto;
+}
+.products_container {
+	display: none;
+}
+.products_container.active {
+	display: block;
 }
 .container .products {
 	display: grid;
 	grid-template-columns: auto auto;
+	grid-column-gap: 80px;
+}
+
+p{
+	font-size: 20px;
+}
+
+span{
+	font-size: 15px;
 }

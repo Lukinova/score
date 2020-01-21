@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" type="text/css" href="<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <title>Store</title>
@@ -9,33 +10,36 @@
 	<div id="st">
 			<div class="container">
 				<div class="wrapper">
-					<div class="oven">
+					<div class="ovens products_container" v-bind:class="{ active: (active_tab == 'ovens') }">
 						<h2>Духовки</h2>
 						<div class="products">
-							<div v-for ='(product, index) in store.data["ovens"]'>
+							<div v-for ='(product, index) in store.data["ovens"]' v-on:click="toCupboards(product)">
 								<img :src="product.img">
-								<p>{{ product.name }}</p>
-								<p>{{product.price}}</p>
+								<h3>{{ product.name }}</h3>
+								<p>Цена:{{product.price}}₽</p>
+								<span>{{ product.description }}</span>
 							</div>
 						</div>
 					</div>
-					<div class="cupboard">
+					<div class="cupboards products_container" v-bind:class="{ active: (active_tab == 'cupboards') }">
 						<h2>Шкафы</h2>
 						<div class="products">
-							<div v-for ='(product, index) in store.data["cupboards"]'>
+							<div v-for ='(product, index) in store.data["cupboards"]' v-on:click="toStoves(product)">
 								<img :src="product.img">
-								<p>{{ product.name }}</p>
-								<p>{{product.price}}</p>
+								<h3>{{ product.name }}</h3>
+								<p>Цена:{{product.price}}₽</p>
+								<span>{{ product.description }}</span>
 							</div>
 						</div>
 					</div>
-					<div class="stoves">
+					<div class="stoves products_container" v-bind:class="{ active: (active_tab == 'stoves') }">
 						<h2>Плиты</h2>
 						<div class="products">
 							<div v-for ='(product, index) in store.data["stoves"]'>
 								<img :src="product.img">
-								<p>{{ product.name }}</p>
-								<p>{{product.price}}</p>
+								<h3>{{ product.name }}</h3>
+								<p>Цена:{{product.price}}₽</p>
+								<span>{{ product.description }}</span>
 							</div>
 						</div>
 					</div>
