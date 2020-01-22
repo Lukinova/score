@@ -1,3 +1,7 @@
+#st{
+background: #dcc2df2e;
+min-height: 1000px;
+}
 .container img{
 	width: 250px;
 	float: left;
@@ -9,6 +13,8 @@
 .wrapper {
 	width: 1100px;
 	margin:0 auto;
+	background:white;
+	min-height: 1000px;
 }
 .products_container {
 	display: none;
@@ -20,6 +26,7 @@
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-column-gap: 80px;
+	grid-row-gap: 30px;
 }
 
 p{
@@ -28,4 +35,16 @@ p{
 
 span{
 	font-size: 15px;
+}
+
+.basket img {
+	width: 50px;
+}
+.basket .products {
+	grid-template-columns: auto;
+	grid-row-gap: 40px;
+}
+hr {
+	border-top: 1px dashed red;
+	width: 100%;
 }
